@@ -1,0 +1,29 @@
+<!--search-->
+<div class="container d-flex justify-content-center">
+  <div class="input-group flex-nowrap w-50 ">
+    <input type="text" class="form-control bg-transparent" aria-label="Username" aria-describedby="addon-wrapping"
+      placeholder="Who is your favourite character?" [(ngModel)]="word" (input)='search()' />
+  </div>
+</div>
+<!--end of search-->
+
+<div class="container" *ngIf="word">
+  <!--begin of material card-->
+  <div class="myGrid">
+    <div *ngFor="let person of personsData " cdkDrag>
+      <mat-card class="myCard text-center">
+        <mat-card-header>
+          <mat-card-title>{{ person.name }}</mat-card-title>
+        </mat-card-header>
+        <hr>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+        <mat-card-content>
+          <a [href]="person.url">URL: {{ person.url }}</a>
+          <p>Height: {{ person.height }}</p>
+          <a [href]="person.url">Homeworld: {{ person.homeworld }}</a>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <!--end of material card-->
+</div>

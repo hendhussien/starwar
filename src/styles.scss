@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  background-image: url('../src/assets/images/space.svg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  .input-group {
+
+    margin-top: 7rem !important;
+    margin-bottom: 3rem !important;
+
+    .form-control {
+      color: #fff;
+    }
+  }
+}
